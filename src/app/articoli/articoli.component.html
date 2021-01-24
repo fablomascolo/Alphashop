@@ -1,0 +1,28 @@
+<h1>Articoli Disponibili</h1>
+<table id="articoli" border="1">
+    <caption>Alimentari</caption>
+    <thead>
+        <tr>
+            <th>Codice</th>
+            <th>Descrizione</th>
+            <th>U.M.</th>
+            <th>Pezzi</th>
+            <th>Peso</th>
+            <th>Prezzo</th> 
+            <th>IsActive</th>
+            <th>Data validità</th>  
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let articolo of articoli'>
+            <td>{{articolo.codart}}</td>
+            <td>{{articolo.descrizione}}</td>
+            <td>{{articolo.um}}</td>
+            <td>{{articolo.pezzi}}</td>
+            <td>{{articolo.peso}}</td>
+            <td>{{articolo.rpezzo}}</td>
+            <td>{{articolo.isactive}}</td>
+            <td>{{articolo.data|date}}</td>
+        </tr>
+    </tbody>    
+</table>
