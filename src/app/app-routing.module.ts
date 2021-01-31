@@ -7,7 +7,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
 const routes: Routes = [
-  {path:'',component : WelcomeComponent},
+  {path:'',component : LoginComponent},
   {path:'welcome/:userid',component : WelcomeComponent},
   {path:'login',component : LoginComponent},
   {path:'articoli',component : ArticoliComponent},
