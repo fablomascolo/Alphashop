@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthappService} from '../services/authapp.service'
 
 @Component({
   selector: 'app-login',
@@ -13,14 +14,14 @@ export class LoginComponent implements OnInit {
   autenticato = true;
   consentito=false;
   errorMsg = 'Spiacente, userid o password sono errati';
-  infoMsg='Accesso consentito'; 
+  infoMsg='Accesso consentito';
 
   constructor(private route:Router) { }
 
   ngOnInit(): void {
   }
 
-  gestAut() 
+  gestAut()
   {
     //console.log(this.userid)
     if (this.userid === 'Fabrizio' && this.password === '123_stella')
