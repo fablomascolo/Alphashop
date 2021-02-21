@@ -20,9 +20,9 @@ export class WelcomeComponent implements OnInit {
   ngOnInit() {
 
     this.utente = this.route.snapshot.params['userid']
-     
+
    // console.log(this.messaggio);
-    
+
   }
 
 }

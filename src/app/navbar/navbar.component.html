@@ -3,7 +3,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-  
+
       <a class="navbar-brand" href="index">AlphaShop</a>
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
@@ -46,13 +46,13 @@
               </a>
             </li>
         </ul>
-  
+
         <!-- Search Box -->
         <form class="form-inline my-2 my-lg-0">
           <input type="text" class="form-control mr-sm-2" name="argomento">
           <input type="submit" id="submit" class="btn btn-outline-success my-2 my-sm-0" value="Cerca">
         </form>
-  
+
         <!-- dropdown menu -->
         <div class="dropdown">
           <button class="btn btn-default dropdown-toggle thumbnail"
@@ -72,7 +72,8 @@
                 <input type="hidden" name="logout" value="${User}">
                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
             </form>
-          <a class="dropdown-item" href="" onclick="$('#myHiddenFormId').submit(); return false;" title="Logout">Logout</a>
+            <a class="dropdown-item" *ngIf="BasicAuth.isLogged()" href="logout" title="Logout">Logout {{BasicAuth.loggedUser()}}</a>
+            <a class="dropdown-item disabled" *ngIf="!BasicAuth.isLogged()" href="" title="Logout">Logout</a>
           </div>
         </div>
     </div>
