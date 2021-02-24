@@ -10,7 +10,7 @@ import { RouteGuardService } from './services/route-guard.service';
 const routes: Routes = [
   {path:'',component : LoginComponent},
   {path:'welcome/:userid',component : WelcomeComponent, canActivate:[RouteGuardService]},
-  {path:'login',component : LoginComponent},
+  {path:'login',component : LoginComponent, canActivate:[RouteGuardService]},
   {path:'index',component : LoginComponent},
   {path:'articoli',component : ArticoliComponent},
   {path:'navbar',component : NavbarComponent},
